@@ -33,6 +33,6 @@ Steps:
     && docker push <YOUR_ACCOUNT_ID>.dkr.ecr.<YOUR_REGION>.amazonaws.com/<YOUR_ECR_REPO_NAME>:v0.1
     ```
 
-    At this step you should be able to create your lambda function and add an REST API using the AWS API Gateway service. If using an API Key, remember to add the `x-api-key` key to the header.
+    At this step you should be able to create your lambda function and expose it as a REST API using the AWS API Gateway service. If using an API Key, remember to add the `x-api-key` key to the header.
 
     ![img3](./images/local_gateway.png)
