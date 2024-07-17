@@ -7,7 +7,7 @@ Using AWS Lambda to host CLIP model for text to image similarity
 
 Steps:
 
-- Create a docker image and upload it to an ECR in AWS (Install AWS CLI before). Find more details [here](https://docs.aws.amazon.com/lambda/latest/dg/python-image.html)
+- Create a docker image and upload it (see Dockerfile) to an ECR in AWS (Install AWS CLI before). Find more details [here](https://docs.aws.amazon.com/lambda/latest/dg/python-image.html)
 
     ```bash
     #login and create an ECR repository
@@ -26,7 +26,7 @@ Steps:
 
     ![img2](./images/local_test.png)
 
-- Send and deploy Lambda function
+- Save your docker image to the ECR and deploy Lambda function
 
     ```
     docker tag img_txt_similarity:v0.1 <YOUR_ACCOUNT_ID>.dkr.ecr.<YOUR_REGION>.amazonaws.com/<YOUR_ECR_REPO_NAME>:v0.1
