@@ -5,6 +5,7 @@ from transformers import CLIPProcessor, CLIPModel
 import torch
 import os
 
+#add cache_dir to avoid permissions issue when using aws lambda, also set env_var TRANSFORMERS_CACHE or HF_HOME to /tmp
 model = CLIPModel.from_pretrained(os.environ.get("HF_MODEL_NAME","openai/clip-vit-base-patch16"),cache_dir="/tmp/")
 processor = CLIPProcessor.from_pretrained(os.environ.get("HF_MODEL_NAME","openai/clip-vit-base-patch16"),cache_dir="/tmp/")
 
